@@ -12,7 +12,7 @@ requirements.
 
 The most up-to date version of this document is available at:
 
-    https://github.com/dev0tion/electrum-twist-server/blob/master/HOWTO.md
+    https://github.com/TWISTproject/electrum-twist-server/blob/master/HOWTO.md
 
 Conventions
 -----------
@@ -150,7 +150,7 @@ find out the best way to do this.
 We will download the latest git snapshot for Electrum to configure and install it:
 
     $ cd ~
-    $ git clone https://github.com/dev0tion/electrum-twist-server
+    $ git clone https://github.com/TWISTproject/electrum-twist-server
     $ cd electrum-twist-server
     $ sudo apt-get install python-setuptools
     $ sudo ./configure
