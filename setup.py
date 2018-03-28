@@ -1,29 +1,29 @@
 from setuptools import setup
 
 setup(
-    name="electrum-stratis-server",
+    name="electrum-twist-server",
     version="1.0",
-    scripts=['run_electrum_stratis_server.py','electrum-stratis-server'],
+    scripts=['run_electrum_twist_server.py','electrum-twist-server'],
     install_requires=['plyvel','jsonrpclib', 'irc >= 11, <=14.0'],
     package_dir={
-        'electrumstratisserver':'src'
+        'electrumtwistserver':'src'
         },
     py_modules=[
-        'electrumstratisserver.__init__',
-        'electrumstratisserver.utils',
-        'electrumstratisserver.storage',
-        'electrumstratisserver.deserialize',
-        'electrumstratisserver.networks',
-        'electrumstratisserver.blockchain_processor',
-        'electrumstratisserver.server_processor',
-        'electrumstratisserver.processor',
-        'electrumstratisserver.version',
-        'electrumstratisserver.ircthread',
-        'electrumstratisserver.stratum_tcp'
+        'electrumtwistserver.__init__',
+        'electrumtwistserver.utils',
+        'electrumtwistserver.storage',
+        'electrumtwistserver.deserialize',
+        'electrumtwistserver.networks',
+        'electrumtwistserver.blockchain_processor',
+        'electrumtwistserver.server_processor',
+        'electrumtwistserver.processor',
+        'electrumtwistserver.version',
+        'electrumtwistserver.ircthread',
+        'electrumtwistserver.stratum_tcp'
     ],
-    description="Stratis Electrum Server",
-    author="dev0tion",
+    description="Twist Electrum Server",
+    author="TWISTproject",
     license="MIT Licence",
-    url="https://github.com/dev0tion/electrum-stratis-server/",
-    long_description="""Server for the Electrum Lightweight Stratis Wallet"""
+    url="https://github.com/dev0tion/electrum-twist-server/",
+    long_description="""Server for the Electrum Lightweight Twist Wallet"""
 )

@@ -21,14 +21,14 @@ params = {
         'script_address': 196,
         'genesis_hash': 'f5ae71e26c74beacc88382716aced69cddf3dffff24f384e1808905e0188f68f'
     },
-    'stratis_main': {
-        'pubkey_address': 63,
+    'twist_main': {
+        'pubkey_address': 0,
         'script_address': 125,
-        'genesis_hash': '0000066e91e46e5a264d42c89e1204963b2ee6be230b443e9159020539d972af'
+        'genesis_hash': '00000826ca14fa68927bcba493d31760964a3b02c9b0dd6e32fb2c5c5f3af003'
     },
-    'stratis_test': {
-        'pubkey_address': 111,
+    'twist_test': {
+        'pubkey_address': 65,
         'script_address': 196,
-        'genesis_hash': '00000161ec84df354cc488b6de9c2a24ba12046e6c0286a797d6a0c8a43f0515'
+        'genesis_hash': '0000059b975c923fb788699c8f2500a98058062304ae2fbca7f0b881223a9580'
     }
 }

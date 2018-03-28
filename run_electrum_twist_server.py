@@ -34,13 +34,13 @@ import imp
 
 
 if os.path.dirname(os.path.realpath(__file__)) == os.getcwd():
-    imp.load_module('electrumstratisserver', *imp.find_module('src'))
+    imp.load_module('electrumtwistserver', *imp.find_module('src'))
 
-from electrumstratisserver import storage, networks, utils
-from electrumstratisserver.processor import Dispatcher, print_log
-from electrumstratisserver.server_processor import ServerProcessor
-from electrumstratisserver.blockchain_processor import BlockchainProcessor
-from electrumstratisserver.stratum_tcp import TcpServer
+from electrumtwistserver import storage, networks, utils
+from electrumtwistserver.processor import Dispatcher, print_log
+from electrumtwistserver.server_processor import ServerProcessor
+from electrumtwistserver.blockchain_processor import BlockchainProcessor
+from electrumtwistserver.stratum_tcp import TcpServer
 
 
 logging.basicConfig()
@@ -85,8 +85,8 @@ def create_config(filename=None):
     config = ConfigParser.ConfigParser()
     # set some defaults, which will be overwritten by the config file
     config.add_section('server')
-    config.set('server', 'banner', 'Welcome to Stratis Electrum!')
-    config.set('server', 'banner_file', '/etc/electrum-stratis.banner')
+    config.set('server', 'banner', 'Welcome to Twist Electrum!')
+    config.set('server', 'banner_file', '/etc/electrum-twist.banner')
     config.set('server', 'host', 'localhost')
     config.set('server', 'electrum_rpc_port', '8000')
     config.set('server', 'report_host', '')
@@ -98,13 +98,13 @@ def create_config(filename=None):
     config.set('server', 'ssl_keyfile', '')
     config.set('server', 'irc', 'no')
     config.set('server', 'irc_nick', '')
-    config.set('server', 'coin', 'stratis')
+    config.set('server', 'coin', 'twist')
     config.set('server', 'donation_address', '')
     config.set('server', 'max_subscriptions', '10000')
 
     config.add_section('leveldb')
-    config.set('leveldb', 'path', '/dev/shm/electrum-stratis_db')
-    config.set('leveldb', 'pruning_limit', '100')
+    config.set('leveldb', 'path', '/dev/shm/electrum-twist_db')
+    config.set('leveldb', 'pruning_limit', '1000')
     config.set('leveldb', 'reorg_limit', '100')
     config.set('leveldb', 'utxo_cache', str(64*1024*1024))
     config.set('leveldb', 'hist_cache', str(128*1024*1024))
@@ -113,12 +113,12 @@ def create_config(filename=None):
 
     # set network parameters
     config.add_section('network')
-    config.set('network', 'type', 'stratis_main')
+    config.set('network', 'type', 'twist_main')
 
     # try to find the config file in the default paths
     if not filename:
         for path in ('/etc/', ''):
-            filename = path + 'electrum-stratis-server.conf'
+            filename = path + 'electrum-twist-server.conf'
             if os.path.isfile(filename):
                 break
 

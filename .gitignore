@@ -1,7 +1,8 @@
 build/
 dist/
-electrum_stratis_server.egg-info/
+electrum_twist_server.egg-info/
 *.pyc
 *.so
 *.o
-electrum-stratis.conf
+electrum-twist.conf
+.vscode/settings.json
